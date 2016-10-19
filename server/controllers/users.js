@@ -37,7 +37,7 @@ function UserController() {
 	}
 	this.logout = function(req, res) {
 		req.session.destroy();
-		res.redirect('/index');
+		res.redirect('#/index');
 	}
 }
 

@@ -22,6 +22,6 @@ app.config(function($routeProvider) {
 			controller: 'answerController'
 		})
 		.otherwise({
-			redirectTo: '#/index'
+			redirectTo: '/index'
 		})
 });
