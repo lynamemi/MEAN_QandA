@@ -1,0 +1,8 @@
+<a href="#/">Home</a> | <a href="/logout">Logout</a>
+<h3>New Question</h3>
+<form ng-submit="create()" ng-model="question">
+	<label>Question: </label><textarea cols="40" rows="8" ng-model="question.question"></textarea>
+	<label>Description (optional): </label><textarea cols="40" rows="8" ng-model="question.description"></textarea></br>
+	<input type="submit" value="Submit">
+</form>
+<button ng-click="clear()">Cancel</button>
