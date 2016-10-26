@@ -1,19 +1,25 @@
-<h3>Hi, {{currentUser.user.username}}!</h3>
-<a href="#/new_question">Add a Question</a> | <a href="/logout">Logout</a>
-<form>
-	<input type="text" ng-model="searchText">
-</form>
-<table>
-	<thead>
-		<th>Question</th>
-		<th>Answers</th>
-		<th>Action</th>
-	</thead>
-	<tbody>
-		<tr ng-repeat="question in questions | filter:searchText">
-			<td>{{question.question}}</td>
-			<td>{{question._answers.length}}</td>
-			<td><a href="#/question/{{question._id}}">Show</a> <a href="#/question/{{question._id}}/new_answer">Answer</a></td>
-		</tr>
-	</tbody>
-</table>
+<div class="container">
+	<h3>Hi, {{currentUser.user.username}}!</h3>
+	<div class="nav">
+		<a href="#/new_question">Add a Question</a> | <a href="/logout">Logout</a>
+	</div>
+	<div class="outline">
+		<form class="center">
+			<input type="text" ng-model="searchText" placeholder="Search questions...">
+		</form>
+		<table>
+			<thead>
+				<th>Question</th>
+				<th>Answers</th>
+				<th>Action</th>
+			</thead>
+			<tbody>
+				<tr ng-repeat="question in questions | filter:searchText">
+					<td>{{question.question}}</td>
+					<td>{{question._answers.length}}</td>
+					<td><a href="#/question/{{question._id}}">Show</a> | <a href="#/question/{{question._id}}/new_answer">Answer</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

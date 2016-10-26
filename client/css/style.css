@@ -1,0 +1,37 @@
+.center {
+	text-align: center;
+}
+.outline {
+	border: .5px solid lightgrey;
+	border-radius: 5px;
+	padding: 50px;
+	background-color: #F0FFFF;
+}
+.nav {
+	display: inline-block;
+	float: right;
+}
+h3 {
+	display: inline-block;
+	text-align: middle;
+}
+table {
+	width: 100%;
+}
+input[type="text"] {
+	width: 90%;
+}
+textarea {
+	width: 100%;
+}
+.container a {
+	text-decoration: none;
+	color: grey;
+}
+.container a:hover {
+	color: coral;
+}
+.small {
+	font-size: .8em;
+	color: coral;
+}

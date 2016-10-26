@@ -1,7 +1,7 @@
 app.controller('answerController', ['$scope', 'answerFactory', 'userFactory', 'questionFactory', '$location', '$routeParams', function($scope, answerFactory, userFactory, questionFactory, $location, $routeParams) {
 
 	$scope.create = function() {
-		if(!$scope.answer.answer || $scope.answer.answer.length < 5) {
+		if($scope.answer.answer.length < 5) {
 			alert("Answer must be at least 5 characters")
 		} else {
 			var newAnswer = {name: $scope.currentUser.user.username, _user: $scope.currentUser.user._id, answer: $scope.answer.answer, details: $scope.answer.details, _question: $routeParams._id}

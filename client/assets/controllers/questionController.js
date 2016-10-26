@@ -1,7 +1,7 @@
 app.controller('questionController', ['$scope', 'questionFactory', 'userFactory', 'answerFactory', '$location', '$routeParams', function($scope, questionFactory, userFactory, answerFactory, $location, $routeParams) {
 
 	$scope.create = function() {
-		if(!$scope.question.question || $scope.question.question.length < 10) {
+		if($scope.question.question.length < 10) {
 			alert("Question must be at least 10 characters")
 		} else {
 			var newQuestion = {name: $scope.currentUser.user.username, _user: $scope.currentUser.user._id, question: $scope.question.question, description: $scope.question.description}
